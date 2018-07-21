@@ -15,7 +15,7 @@ app.use(function(req, res, next) {
     next();
   });
 
-mongoose.connect(config.db);
+mongoose.connect(config.DB);
 
 require('./routes/route')(app);
 

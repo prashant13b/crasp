@@ -8,6 +8,7 @@ module.exports = (app) => {
    require('./signin/signin')(app);
 
    require('./removeUrl/removeUrl')(app);   
-   
+
+   require('./checkAuth/checkAuth')(app);      
 }
 

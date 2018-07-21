@@ -15,7 +15,7 @@ module.exports = (app) => {
                         username: user.username,
                         userId: user._id
                     },
-                    config.secret,
+                    config.SECRET,
                     {
                         expiresIn : '30d'
                     }
