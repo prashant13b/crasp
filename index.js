@@ -15,7 +15,7 @@ app.use(function(req, res, next) {
     next();
   });
 
-mongoose.connect(config.DB);
+mongoose.connect(config.DB,{useNewUrlParser: true});
 
 require('./routes/route')(app);
 

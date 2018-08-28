@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt-nodejs');
 const jwt = require('jsonwebtoken');
 const config = require('../../config/config');    
 
-module.exports = (app) => {
+const signIn = app => {
     app.post('/signin',(req,res)=>{
     let {username,password} = req.body
         User.findOne({username}).then((user)=>{
@@ -33,3 +33,5 @@ module.exports = (app) => {
         })  
     })
 }
+
+module.exports = signIn;

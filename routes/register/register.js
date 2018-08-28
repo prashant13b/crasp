@@ -1,18 +1,19 @@
 const User = require('../../models/User');
 const bcrypt = require('bcrypt-nodejs');
 
-module.exports = (app) => {
+const register = app => {
     
     app.post('/register',(req,res)=>{
 
        let {username,password} = req.body;
-        const hash = bcrypt.hashSync(password);
-        
+       const hash = bcrypt.hashSync(password);
+           
        User.findOne({username}).then((user)=>{
                 if(!user){
                     User.create({
                         username,password:hash
-                    }).then((user)=>{
+                    })
+                    .then((user)=>{
                         res.json({message:"success"});
                     })
                 }
@@ -23,3 +24,5 @@ module.exports = (app) => {
     
     })
 }   
+
+module.exports = register;

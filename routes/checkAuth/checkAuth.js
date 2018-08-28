@@ -1,7 +1,7 @@
 const User = require('../../models/User');
 const checkAuth = require('../../middleware/check-auth')
 
-module.exports = (app) =>{
+const check_Auth = app =>{
 
 app.post('/checkAuth',checkAuth,(req,res)=>{
     
@@ -17,3 +17,5 @@ app.post('/checkAuth',checkAuth,(req,res)=>{
 })
 
 }
+
+module.exports = check_Auth;

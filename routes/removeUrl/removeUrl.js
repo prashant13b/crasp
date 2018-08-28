@@ -1,4 +1,4 @@
-module.exports = (app) => {
+const removeUrl = app => {
 
 app.put('/removeUrl',(req,res)=>{
     let {username , url} = req.body;
@@ -14,5 +14,6 @@ app.put('/removeUrl',(req,res)=>{
     });
 
 });
-
 }
+
+module.exports = removeUrl;

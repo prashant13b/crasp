@@ -9,6 +9,8 @@ module.exports = (app) => {
 
    require('./removeUrl/removeUrl')(app);   
 
-   require('./checkAuth/checkAuth')(app);      
+   require('./checkAuth/checkAuth')(app);
+   
+   require('./getUrls/getUrls')(app);
 }
 

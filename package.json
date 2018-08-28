@@ -1,7 +1,7 @@
 {
   "name": "crasp",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple downloader",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js"
@@ -12,6 +12,7 @@
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
+    "global": "^4.3.2",
     "jsonwebtoken": "^8.2.2",
     "mongoose": "^5.1.3"
   }
